@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-
+	<link rel="stylesheet" type="text/css" href="main.css">
     <title>Static Top Navbar Example for Bootstrap</title>
 
 <script>
@@ -21,7 +21,12 @@
 	  	alert("hello contact");
 	  	return false;
 	}
-
+	
+	function clickProverka(){
+		window.open ('e2.html','_self',false)
+		
+		return false;
+	}
     </script>
 
 
@@ -60,8 +65,10 @@
     </div>
 
 <div class="page-header">
-<button type="button" class="btn btn-lg btn-success">Success</button>
-<object width="80%" height="500px" type="application/pdf" data="./IBIZI3.pdf" ></object>
+	<div style= "text-align:center">
+	<button type="button" class="btn btn-lg btn-success button_start" onclick="clickProverka()">Proverka</button>
+	</div>
+	<!--<object width="60%" height="400px" type="application/pdf" data="./IBIZI3.pdf" ></object>-->
 
 </div>
 
