@@ -81,13 +81,16 @@
             <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div class="navbar-collapse collapse">
-            <button class="btn btn-primary btn-lg pull-right" id="auth" data-toggle="modal" data-target="#modalAuth">
+            
+            <button class="btn_new pull-right" id="unauth" onclick="unauthcl()">
+                Sign Out
+            </button>
+            &nbsp &nbsp
+            <button class="btn_new pull-right" id="auth" data-toggle="modal" data-target="#modalAuth">
                 Sign In
             </button>
 
-            <button class="btn btn-primary btn-lg pull-right" id="unauth" onclick="unauthcl()">
-                Sign Out
-            </button>
+            
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li class="about"><a href="#about" onclick="aboutListener()">About</a></li>
@@ -99,15 +102,24 @@
 </div>
 
 <div class="page-header">
-    <ul id="list">
+    <div style="text-align:center" class="page1block1">
+        <br><br>
+        <button class="btn_new disabled" id="addButton" data-toggle="modal" data-target="#myModal">
+         Добавить
+        </button>
+        <div style="text-align:center" class="page1block2">
+            <br><br>
+    <div id="list">
 
-    </ul>
+    </div>
     <!--<object width="60%" height="400px" type="application/pdf" data="./IBIZI3.pdf" ></object>-->
-
+        </div>
+    </div>
 </div>
 
 
 <?php
+header("Content-type: text/html; charset=utf-8");
 $dir = './resourse/';
 $files1 = scandir($dir);
 foreach ($files1 as &$value) {
@@ -115,11 +127,9 @@ foreach ($files1 as &$value) {
         $len = strlen($value);
         $dir = substr($value, 5);
         echo"
-							<script>
-								$('#list').append('<li><button class=\"btn_new btn-lg btn_block\" id =\"$dir\" onclick=\"ClickView(this.id)\">$dir</a></li><br><br>');
-							</script>
-						";
-
+	    <script>
+		$('#list').append('<li><button class=\"btn_doc btn_block\" id =\"$dir\" onclick=\"ClickView(this.id)\">$dir</a></li><br><br>');
+	    </script>";
     }
 }
 
@@ -127,9 +137,7 @@ foreach ($files1 as &$value) {
 
 ?>
 
-<button class="btn btn-primary btn-lg disabled" id="addButton" data-toggle="modal" data-target="#myModal">
-    Добавить
-</button>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">

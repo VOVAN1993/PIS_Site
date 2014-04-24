@@ -7,20 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-
 	<link rel="stylesheet" type="text/css" href="main.css">
+	    <script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js">
+	    </script>
+	<link rel="stylesheet" href="./bootstrap-3.1.1-dist/css/bootstrap.css">
+<script src="./bootstrap-3.1.1-dist/js/bootstrap.js" type="text/javascript"></script>
     <title>Static Top Navbar Example for Bootstrap</title>
 
 <script>
-	function aboutListener(){
-		var $name = "./IBIZI3.pdf";
-  		alert($name);
-	  	//alert("hello about1");
+	
+	function aboutListener(string){
+	  	alert(string);
 	  	return false;
 	}
 
@@ -29,6 +27,10 @@
 	  	return false;
 	}
 	
+	function clickProverka(){
+		window.open ('e2.php','_self',false);		
+		return false;
+	}
     </script>
 
 
@@ -48,6 +50,7 @@
     <![endif]-->
   </head>
 
+
   <body role="document">
 
     <!-- Static navbar -->
@@ -60,46 +63,39 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li class="about"><a href="#about" onclick="aboutListener()">About</a></li>
-            <li><a href="#contact" onclick="aboutListener()">Contact</a></li>
+            <li><a href="#contact" onclick="contactListener()">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-<div class="page-header">
-     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-        </div>
-<script>
-$( document ).ready(function() {
-    var tmp = document.location.toString();
-    alert("h");
-});
-</script>
-
-      </div>
-
-    </div>
-
+<div class="prosmotr" align="left" style="text-align:center">
+  <br><br><br><br>
+  <font style="font-size: 14px"><b>Чтобы перейти к комплектам документации, <br>нажмите кнопку:</b></font>
+  <br><br><br>
+	<div style= "text-align:center">
+	<button type="button" class="btn_new" onclick="clickProverka()">Prosmotr</button>
+	</div>
+	<!--<object width="60%" height="400px" type="application/pdf" data="./IBIZI3.pdf" ></object>-->
 
 </div>
 
 
+</div>
+<div class="fotos" align="center">
+  <h1>Разработчики</h1><br><br>
+      
+  <img src="ddd.png" alt="vova" class="img_circle" width="220px">&nbsp &nbsp &nbsp &nbsp  
+  <img src="vvv.png" alt="vova" class="img_circle" width="220px">
+  <div id="dasha"><b>Уфимцева Дарья </b></div><div id="vova"><b>Приходько Владимир</b></div>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 
-    
+    </div>
   </body>
 </html>

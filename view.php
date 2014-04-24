@@ -88,18 +88,22 @@
     <div class="container-fluid">
         <div class="row" id="my">
 
-            <div class="col-sm-3 col-md-2 sidebar">
+            <div class="col-sm-3 col-md-2 sidebar" id="block_left">
                 <ul class="nav nav-sidebar" id="navbar">
                 </ul>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <button class="btn_new btn_block" id="back" onclick="back()">
+                Back
+                </button>
+                <br><br><br><br><br>
             </div>
             <div id="pdf"></div>
-        </div>s
+        </div>
     </div>
-    <button class="btn btn-primary btn-lg" onclick="back()">
-        Back
-    </button>
+    
 </div>
 <?php
+header("Content-type: text/html; charset=utf-8");
 $dir = "./resourse/_pdf_" . $_GET['name'];
 $files1 = scandir($dir);
 $count = count($files1);

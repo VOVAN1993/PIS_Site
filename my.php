@@ -1,5 +1,5 @@
 <?php 
-  
+ header("Content-type: text/html; charset=utf-8");
  var_dump( $_FILES['file']['tmp_name']);
  mkdir("./resourse/_pdf_".$_POST["name"],0777);
  chmod("./resourse/_pdf_".$_POST["name"],0777);
