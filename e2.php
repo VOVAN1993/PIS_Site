@@ -13,12 +13,17 @@
     <title>Static Top Navbar Example for Bootstrap</title>
 
     <script>
+        function delete_cookie ( cookie_name )
+        {
+            var cookie_date = new Date ( );  // Текущая дата и время
+            cookie_date.setTime ( cookie_date.getTime() - 1 );
+            document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
+        }
         $(document).ready(function () {
             if(document.cookie.substr(document.cookie.lastIndexOf("access=")+"access=".length)=="yes"){
                 $("#addButton").removeClass("disabled");
             }else{
                 $("#addButton").addClass("disabled");
-
             }
 
             //alert(window.location.toString());
@@ -37,8 +42,11 @@
 
         function signin(){
             if($("#name").val()=="admin" && $("#pass").val()=="admin"){
+                delete_cookie("access");
                 document.cookie = "access=yes";
+                alert(document.cookie);
             }else{
+                delete_cookie("access");
                 document.cookie = "access=no";
             }
             location.reload()
@@ -48,6 +56,7 @@
         }
 
         function unauthcl(){
+            delete_cookie("access");
             document.cookie = "access=no";
             location.reload()
 
