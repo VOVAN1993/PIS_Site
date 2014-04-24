@@ -10,14 +10,15 @@
   text-decoration: none;
 }
 .logo {
-	width: 180px;
+	width: 200px;
 	padding-right: 15px;
-		
+	float: left;
+	margin-top: 4px;
 }
 .prosmotr {
 	position: absolute;
 	width: 500px;
-	height: 100%;
+	height: 550px;
 	background: rgb(190,190,190);
 	left: 100px;
 	color: rgb(70,70,70);	
@@ -25,7 +26,7 @@
 .fotos {
 	position: absolute;
 	width: 650px;
-	height: 100%;
+	height: 550px;
 	left: 600px;
 	background: rgb(216,191,216);
 	color: rgb(70,70,70);
@@ -49,7 +50,7 @@
 .page1block1 {
 	position: absolute;
 	width: auto;
-	height: 100%;
+	height: 400px;
 	background: rgb(190,190,190);
 	color: rgb(70,70,70);
 	left: 100px;
@@ -58,7 +59,7 @@
 .page1block2 {
 	position: absolute;
 	width: auto;
-	height: 100%;
+	height: 375px;
 	background: rgb(216,191,216);
 	color: rgb(70,70,70);
 	left: 0px;
@@ -67,8 +68,20 @@
 }
 #block_left {
 	background: rgb(216,191,216);
-	width: 200px;
-	left: 20px;
+	width: 205px;
+	height: 525px;
+	left: 65px;
+}
+#object {
+	position: absolute;
+	left: 270px;
+}
+.li_hover {
+	left: -15px;	
+}
+.li_hover:hover {
+	width: 205px;
+	left: -15px;	
 }
 ul {
   list-style-type: none;

@@ -52,6 +52,22 @@
             location.reload()
 
         }
+        
+        function clickStart(){
+	  	window.open ('index.php','_self',false)
+	  	return false;
+	}
+
+	function contactListener(){
+	  	alert("hello contact");
+	  	return false;
+	}
+	
+	function clickProverka(){
+		window.open ('start.php','_self',false)
+		
+		return false;
+	}
     </script>
 
 
@@ -76,9 +92,10 @@
 
 <!-- Static navbar -->
 <div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
+      <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Project name</a>
+	  <img src="logo_word.png" class="logo" align="right">
+          <a class="navbar-brand" href="#" onclick="clickStart()"><b>ПРУФ</b></a>
         </div>
         <div class="navbar-collapse collapse">
             
@@ -92,14 +109,14 @@
 
             
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="about"><a href="#about" onclick="aboutListener()">About</a></li>
-                <li><a href="#contact" onclick="aboutListener()">Contact</a></li>
-            </ul>
-        </div>
-        <!--/.nav-collapse -->
+            <li class="active"><a href="#" onclick="clickStart()">Home</a></li>
+            <li class="about"><a href="#about" onclick="clickProverka()">About</a></li>
+            <li><a href="#contact" onclick="aboutListener()">Contact</a></li>
+          </ul>
+	  
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-</div>
 
 <div class="page-header">
     <div style="text-align:center" class="page1block1">
@@ -119,7 +136,7 @@
 
 
 <?php
-header("Content-type: text/html; charset=utf-8");
+
 $dir = './resourse/';
 $files1 = scandir($dir);
 foreach ($files1 as &$value) {

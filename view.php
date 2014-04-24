@@ -25,19 +25,26 @@
             str_name_file = "./resourse/_pdf_" + tmp.substr(int_last + "?name=".length);
         });
 
-        function aboutListener() {
 
-            alert("hello about1");
-            return false;
-        }
+	function clickStart(){
+	  	window.open ('index.php','_self',false)
+	  	return false;
+	}
 
-        function contactListener() {
-            alert("hello contact");
-            return false;
-        }
+	function contactListener(){
+	  	alert("hello contact");
+	  	return false;
+	}
+	
+	function clickProverka(){
+		window.open ('start.php','_self',false)
+		
+		return false;
+	}
+
 
         function view_pdf(string) {
-            $('#pdf').html('<object width="80%" height="500px" type="application/pdf" data= ' + str_name_file + '/' + string + '></object>');
+            $('#pdf').html('<object width="75%" height="525px" id="object" type="application/pdf" data= ' + str_name_file + '/' + string + '></object>');
             return false;
         }
 
@@ -69,20 +76,21 @@
 
 <!-- Static navbar -->
 <div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
+      <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Project name</a>
+	  <img src="logo_word.png" class="logo" align="right">
+          <a class="navbar-brand" href="#" onclick="clickStart()"><b>опст</b></a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="about"><a href="#about" onclick="aboutListener()">About</a></li>
-                <li><a href="#contact" onclick="aboutListener()">Contact</a></li>
-            </ul>
-        </div>
-        <!--/.nav-collapse -->
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" onclick="clickStart()">Home</a></li>
+            <li class="about"><a href="#about" onclick="clickProverka()">About</a></li>
+            <li><a href="#contact" onclick="aboutListener()">Contact</a></li>
+          </ul>
+	  
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-</div>
 
 <div class="page-header">
     <div class="container-fluid">
@@ -114,7 +122,7 @@ foreach ($files1 as &$value) {
 
         echo"
 			<script>				
-				$('#navbar').append('<li><a href=\"#\" id =\"$value\" onclick=\"view_pdf(this.id)\">$value</a></li>');
+				$('#navbar').append('<li class=\"li_hover\"><a href=\"#\" id =\"$value\" onclick=\"view_pdf(this.id)\">$value</a></li>');
 			</script>
 		";
 
