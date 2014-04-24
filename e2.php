@@ -25,26 +25,17 @@
             }else{
                 $("#addButton").addClass("disabled");
             }
-
-            //alert(window.location.toString());
         });
         function ClickView(string) {
             window.open('view.php?name=' + string, '_self', false)
-            //alert(string);
-
-
             return false;
         }
-        function add() {
-            //alert("add");
 
-        }
 
         function signin(){
             if($("#name").val()=="admin" && $("#pass").val()=="admin"){
                 delete_cookie("access");
                 document.cookie = "access=yes";
-                alert(document.cookie);
             }else{
                 delete_cookie("access");
                 document.cookie = "access=no";
