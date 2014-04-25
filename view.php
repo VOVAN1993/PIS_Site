@@ -66,7 +66,7 @@
       <div class="container">
         <div class="navbar-header">
 	  <img src="logo_word.png" class="logo" align="right">
-          <a class="navbar-brand" href="#" onclick="clickStart()"><b>œ–”‘</b></a>
+          <a class="navbar-brand" href="#" onclick="clickStart()"><b>–ü–†–£–§</b></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
