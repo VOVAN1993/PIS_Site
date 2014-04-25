@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
     <title>Static Top Navbar Example for Bootstrap</title>
 
     <script>
@@ -31,7 +30,6 @@
             return false;
         }
 
-
         function signin(){
             if($("#name").val()=="admin" && $("#pass").val()=="admin"){
                 delete_cookie("access");
@@ -41,28 +39,22 @@
                 document.cookie = "access=no";
             }
             location.reload()
-
         }
         function aboutListener(){
         }
-
         function unauthcl(){
             delete_cookie("access");
             document.cookie = "access=no";
             location.reload()
-
         }
-        
         function clickStart(){
 	  	window.open ('index.php','_self',false)
 	  	return false;
 	}
-
 	function contactListener(){
 	  	alert("hello contact");
 	  	return false;
 	}
-	
 	function clickProverka(){
 		window.open ('start.php','_self',false)
 		
@@ -89,7 +81,6 @@
 </head>
 
 <body role="document">
-
 <!-- Static navbar -->
 <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
@@ -99,21 +90,15 @@
         </div>
         <div class="navbar-collapse collapse">
             
-            <button class="btn_new pull-right" id="unauth" onclick="unauthcl()">
-                Sign Out
-            </button>
+            <button class="btn_new pull-right" id="unauth" onclick="unauthcl()">Sign Out</button>
             &nbsp &nbsp
-            <button class="btn_new pull-right" id="auth" data-toggle="modal" data-target="#modalAuth">
-                Sign In
-            </button>
-
-            
+            <button class="btn_new pull-right" id="auth" data-toggle="modal" data-target="#modalAuth">Sign In</button>
+           
             <ul class="nav navbar-nav">
             <li class="active"><a href="#" onclick="clickStart()">Home</a></li>
             <li class="about"><a href="#about" onclick="clickProverka()">About</a></li>
             <li><a href="#contact" onclick="aboutListener()">Contact</a></li>
           </ul>
-	  
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -127,16 +112,12 @@
         <div style="text-align:center" class="page1block2">
             <br><br>
     <div id="list">
-
     </div>
-    <!--<object width="60%" height="400px" type="application/pdf" data="./IBIZI3.pdf" ></object>-->
-        </div>
     </div>
+  </div>
 </div>
 
-
 <?php
-
 $dir = './resourse/';
 $files1 = scandir($dir);
 foreach ($files1 as &$value) {
@@ -149,12 +130,7 @@ foreach ($files1 as &$value) {
 	    </script>";
     }
 }
-
-
-
 ?>
-
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -165,14 +141,12 @@ foreach ($files1 as &$value) {
             </div>
             <div class="modal-body">
 
-
                 <form class="well" enctype="multipart/form-data" action="my.php" method="post">
                     <label>Название</label>
                     <input type="file" min="1" max="9999" name="file[]" multiple="true"/>
                     <input name="name" type="text" class="span3" placeholder="Название документации">
                     <button type="submit" class="btn">Make</button>
                 </form>
-
 
             </div>
             <div class="modal-footer">
@@ -191,16 +165,12 @@ foreach ($files1 as &$value) {
             </div>
             <div class="modal-body">
 
-
                 <div class="form-signin well">
                     <h2 class="form-signin-heading"  >Please sign in</h2>
                     <input id="name" name="name" type="text" class="input-block-level" placeholder="Name">
                     <input id="pass" name="pass" type="password" class="input-block-level" placeholder="Password">
                     <button class="btn btn-large btn-primary" onclick="signin()">Sign in</button>
-
                 </div>
-
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -213,7 +183,5 @@ foreach ($files1 as &$value) {
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-
-
 </body>
 </html>

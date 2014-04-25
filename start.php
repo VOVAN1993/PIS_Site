@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +15,6 @@
     <title>Static Top Navbar Example for Bootstrap</title>
 
 <script>
-  
 	function clickStart(){
 	  	window.open ('index.php','_self',false)
 	  	return false;
@@ -40,7 +38,6 @@
 	}
     </script>
 
-
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -56,7 +53,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
 
   <body role="document">
 
@@ -86,18 +82,14 @@
 	<button type="button" class="btn_new" onclick="clickProverka2()">Prosmotr</button>
 	</div>
 	<!--<object width="60%" height="400px" type="application/pdf" data="./IBIZI3.pdf" ></object>-->
-
 </div>
-
 
 </div>
 <div class="fotos" align="center">
   <h1>Разработчики</h1><br><br>
-      
   <img src="ddd.png" alt="vova" class="img_circle" width="220px">&nbsp &nbsp &nbsp &nbsp  
   <img src="vvv.png" alt="vova" class="img_circle" width="220px">
   <div id="dasha"><b>Уфимцева Дарья </b></div><div id="vova"><b>Приходько Владимир</b></div>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,7 +27,6 @@
 		return false;
 	}
     </script>
-
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -61,8 +59,7 @@
             <li class="about"><a href="#about" onclick="clickProverka()">About</a></li>
             <li><a href="#contact" onclick="aboutListener()">Contact</a></li>
           </ul>
-	  
-        </div><!--/.nav-collapse -->
+	</div><!--/.nav-collapse -->
       </div>
     </div>
 
@@ -83,15 +80,11 @@
 	</div>
 </div>
 
-
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="./bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-
     
   </body>
 </html>
